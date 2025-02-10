@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Salesforce Records</title>
+    <link rel="stylesheet" href="sf_create_records.css">
+    </link>
+</head>
+
+<body>
+    <script type="module" src="sf_create_records.js"></script>
+
+    <div class="container">
+        <h1>Create Salesforce Records</h1>
+
+        <!-- Account Form -->
+        <div class="form-section">
+            <button class="accordion-header" onclick="toggleAccordion('accountFormContent')">
+                Create Account <span>+</span>
+            </button>
+            <div id="accountFormContent" class="accordion-content">
+                <form id="accountForm">
+                    <label for="accountName">Account Name:</label>
+                    <input type="text" id="accountName" name="Name" required>
+                    <button type="button" onclick="handleSubmit('accountForm', 'Account')">Create Account</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="form-section">
+            <button class="accordion-header" onclick="toggleAccordion('contactFormContent')">
+                Create Contact <span>+</span>
+            </button>
+            <div id="contactFormContent" class="accordion-content">
+                <form id="contactForm">
+                    <label for="contactFirstName">First Name:</label>
+                    <input type="text" id="contactFirstName" name="FirstName" required>
+                    <label for="contactLastName">Last Name:</label>
+                    <input type="text" id="contactLastName" name="LastName" required>
+                    <label for="contactEmail">Email:</label>
+                    <input type="email" id="contactEmail" name="Email" required>
+                    <button type="button" onclick="handleSubmit('contactForm', 'Contact')">Create Contact</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Lead Form -->
+        <div class="form-section">
+            <button class="accordion-header" onclick="toggleAccordion('leadFormContent')">
+                Create Lead <span>+</span>
+            </button>
+            <div id="leadFormContent" class="accordion-content">
+                <form id="leadForm">
+                    <label for="leadFirstName">First Name:</label>
+                    <input type="text" id="leadFirstName" name="FirstName" required>
+                    <label for="leadLastName">Last Name:</label>
+                    <input type="text" id="leadLastName" name="LastName" required>
+                    <label for="leadCompany">Company:</label>
+                    <input type="text" id="leadCompany" name="Company" required>
+                    <button type="button" onclick="handleSubmit('leadForm', 'Lead')">Create Lead</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Case Form -->
+        <div class="form-section">
+            <button class="accordion-header" onclick="toggleAccordion('caseFormContent')">
+                Create Case <span>+</span>
+            </button>
+            <div id="caseFormContent" class="accordion-content">
+                <form id="caseForm">
+                    <label for="caseSubject">Subject:</label>
+                    <input type="text" id="caseSubject" name="Subject" required>
+                    <label for="caseDescription">Description:</label>
+                    <textarea id="caseDescription" name="Description" required></textarea>
+                    <button type="button" onclick="handleSubmit('caseForm', 'Case')">Create Case</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Opportunity Form -->
+        <div class="form-section">
+            <button class="accordion-header" onclick="toggleAccordion('opportunityFormContent')">
+                Create Opportunity <span>+</span>
+            </button>
+            <div id="opportunityFormContent" class="accordion-content">
+                <form id="opportunityForm">
+                    <label for="opportunityName">Opportunity Name:</label>
+                    <input type="text" id="opportunityName" name="Name" required>
+                    <label for="opportunityAmount">Amount:</label>
+                    <input type="number" id="opportunityAmount" name="Amount" required>
+                    <label for="opportunityCloseDate">Close Date:</label>
+                    <input type="date" id="opportunityCloseDate" name="CloseDate" required>
+                    <button type="button" onclick="handleSubmit('opportunityForm', 'Opportunity')">Create
+                        Opportunity</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
